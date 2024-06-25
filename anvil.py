@@ -34,15 +34,15 @@ try:
     keyboard.wait('pause')  # ''キーが押されるまで待ちます
     lx,ly =pyautogui.position()     #Aスロット座標
     print(f"x:{lx}y:{ly}")
-    
+    print("pauseを押した！")
     keyboard.wait('pause')  # ''キーが押されるまで待ちます
     rx,ry =pyautogui.position()  #Bスロット座標
     print(f"x:{rx}y:{ry}")
-
+    print("pauseを押した！")
     keyboard.wait('pause')  # ''キーが押されるまで待ちます
     ax,ay =pyautogui.position() #完成品スロット座標
     print(f"x:{ax}y:{ay}")
-
+    print("pauseを押した！")
     #9スロット目に刀が来るようにしてください
     #あとrx,ryの値を使えば一応Bスロットのアイテムも自動で入れられます
     #pauseを押す度に動作するようになっている(はず)
@@ -51,10 +51,11 @@ try:
     while True:
     
         keyboard.wait('pause')  # ''キーが押されるまで待ちます
-        for i in range(64):
+        #for i in range(64):
+        print("pauseを押した！")
     #MoveAndPress(rx,ry,str(j),0.1)
-            MoveAndPress(lx,ly,"9",0.1)
-            MoveAndClick(ax,ay,0.1)
+        MoveAndPress(lx,ly,"9",0.1)
+        MoveAndClick(ax,ay,0.1)
 except KeyboardInterrupt:
         print("Operation cancelled.")
 
